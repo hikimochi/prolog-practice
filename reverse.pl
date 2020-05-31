@@ -7,6 +7,6 @@ append(X,Y,Z):-
   Z=[W|Z1].
 
 reverse([],[]).
-reverse([X|L],R):-
+reverse([X|L],R):- %空集合で収束する
   reverse(L,R1),
   append(R1,[X],R).
